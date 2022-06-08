@@ -1,5 +1,8 @@
 'use strict';
-alert("Don't refresh otherwise you will loose progress !");
+window.onbeforeunload = function () {
+  return 'Data will be lost if you leave the page, are you sure?';
+};
+
 const score = document.getElementById('score');
 const score1 = document.getElementById('score1');
 const score2 = document.getElementById('score2');
